@@ -1,4 +1,5 @@
-import { createContext, useEffect, useState } from "react";
+/* eslint-disable no-unused-vars */
+import { createContext, useState } from "react";
 import { food_list } from "../assets/frontend_assets/assets";
 export const StoreContext = createContext(null)
 
@@ -17,12 +18,23 @@ const StoreContextProvider = (props)=>{
     const removeFromCart = (itemId) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
     }
-    useEffect(()=>{
-        console.log(cartItems)
-    },[cartItems])
+
+
+    const getTotalCartAmount = () =>{
+        let totalAmount = 0;
+        for (const item in cartItems)
+        {
+            if(cartItems[item]>0){
+            let iteminfo = food_list.find((product)=>product.id === item);
+            totalAmount += iteminfo.price * cartItems[item];}
+        }
+        return totalAmount;
+    } 
+
 
     const contextValue = {
-        food_list,cartItems,setCartItems,removeFromCart,addToCart
+        food_list,cartItems,setCartItems,removeFromCart,addToCart,
+        getTotalCartAmount
     }
     return (
         <StoreContext.Provider value={contextValue}>
