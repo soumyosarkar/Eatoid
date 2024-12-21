@@ -10,7 +10,7 @@ const Footer = () => {
             <img src={assets.logo} alt="" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium optio voluptatem voluptas, asperiores alias aut voluptates ipsum dicta corrupti a aliquid, deserunt ullam quod at, quae architecto similique numquam commodi?</p>
             <div className='footer-icon'>
-            <img src={assets.twitter_icon} alt="" />
+            {/* <img src={assets.twitter_icon} alt="" /> */}
             <img src={assets.facebook_icon} alt="" />
             <img src={assets.linkedin_icon} alt="" />
             </div>

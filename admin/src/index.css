@@ -8,7 +8,7 @@
 }
 
 body{
-  background-color: #121212;
+  background-color: #5b5b5b;
   color: #fff;
   min-height: 100vh;
 }
@@ -21,4 +21,13 @@ hr{
   height: 1px;
   background-color: #a9a9a9;
   
+}
+.app-content{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
