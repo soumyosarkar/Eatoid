@@ -59,7 +59,19 @@
     top:-8px;
     right: -8px;
 }
-
+.navbar-profile{
+    position: relative;
+}
+.navbar-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+.navbar-profile:hover .navbar-profile-dropdown{
+    display: flex;
+    
+}
 @media (max-width:1050px) {.navbar .logo {
 width: 140px;
 }
