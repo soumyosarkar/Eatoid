@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import { food_list } from "../assets/frontend_assets/assets";
 import PropTypes from "prop-types";
 
 export const StoreContext = createContext(null);
@@ -8,6 +7,7 @@ const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const url = "http://localhost:4000/";
   const [token, setToken] = useState(" ");
+  const [food_list,setFoodList]=useState([])
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
