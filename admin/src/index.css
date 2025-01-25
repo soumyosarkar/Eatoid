@@ -8,12 +8,12 @@
 }
 
 body{
-  background-color: #5b5b5b;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   min-height: 100vh;
 }
 a{
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 hr{

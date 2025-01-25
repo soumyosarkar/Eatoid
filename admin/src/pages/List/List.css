@@ -4,12 +4,12 @@
     align-items: center;
     gap: 10px;
     padding: 12px 15px;
-    border: 1px solid #000000;
+    border: 1px solid #dddddd;
     font-size: 13px;
-    color: azure;
+    /* color: azure; */
 }
-.list-table-format .title{
-    background-color: blueviolet;
+.list-table-format.title{
+    background-color: #d4d4d4;
 }
 .list-table-format img{
     width: 50px;

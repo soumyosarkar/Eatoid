@@ -76,9 +76,9 @@ const StoreContextProvider = (props) => {
   }, []);
 
 
-  useEffect(()=>{
-    console.log(food_list)
-  },[food_list])
+  // useEffect(()=>{
+  //   console.log(food_list)
+  // },[food_list])
 
   const contextValue = {
     food_list,

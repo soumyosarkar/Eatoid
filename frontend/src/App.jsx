@@ -7,6 +7,8 @@ import Home from "./pages/Home/Home.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import AppDownload from "./components/AppDownload/AppDownload.jsx";
 import LoginPopup from "./components/LoginPopup/LoginPopup.jsx";
+import Verify from "./pages/Verify/Verify.jsx";
+import MyOrders from "./pages/MyOrders/MyOrders.jsx";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -21,6 +23,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/order" element={<PlaceOrder />} />
+            <Route path="/verify-payment" element={<Verify/>}/>
+            <Route path="/myorders" element={<MyOrders/>}/>
           </Routes>
         </div>
         <AppDownload />

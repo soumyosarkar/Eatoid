@@ -1,61 +1,320 @@
-import  { useContext, useEffect, useState } from "react";
+// import { useContext, useEffect, useState } from "react";
+// import "./PlaceOrder.css";
+// import { StoreContext } from "../../context/StoreContext";
+// import axios from "axios";
+
+// const PlaceOrder = () => {
+//   const { getTotalCartAmount, token, food_list, cartItems, url } =
+//     useContext(StoreContext);
+//   const [data, setData] = useState({
+//     firstName: "",
+//     lastName: "",
+//     email: "",
+//     street: "",
+//     city: "",
+//     state: "",
+//     zipcode: "",
+//     country: "",
+//     phone: "",
+//   });
+//   const onChangeHandler = (e) => {
+//     const name = e.target.name;
+//     const value = e.target.value;
+//     setData((data) => ({
+//       ...data,
+//       [name]: value,
+//     }));
+//   };
+//   useEffect(() => {
+//     console.log(data);
+//   }, [data]);
+
+//   const placeholder = async (event) => {
+//     event.preventDefault();
+//     let orderItems = [];
+//     food_list.map((item) => {
+//       if (cartItems[item._id] > 0) {
+//         let itemInfo = item;
+//         itemInfo["quantity"] = cartItems[item._id];
+//         orderItems.push(itemInfo);
+//       }
+//     });
+
+//     let orderData = {
+//       address: data,
+//       items: orderItems,
+//       amount: getTotalCartAmount() + 3,
+//     };
+
+//     console.log("Order Data:", orderData);
+//     console.log("API URL:", url + "api/order/place");
+
+//     let response = await axios.post(url + "api/order/place", orderData, {
+//       headers: {
+//         token,
+//       },
+//     });
+
+//     if (response.data.success) {
+//       const { session_url } = response.data;
+//       window.location.replace(session_url);
+//       console.log(session_url);
+//     } else {
+//       console.error("Error Response:", response.data);
+//       alert("Error: " + response.data.message);
+//     }
+//   };
+//   return (
+//     <form className="place-order" onSubmit={placeholder}>
+      // <div className="place-order-left">
+      //   <p className="title">Delivery Information</p>
+      //   <div className="multi-fields">
+      //     <input
+      //       required
+      //       type="text"
+      //       name="firstName"
+      //       onChange={onChangeHandler}
+      //       value={data.firstName}
+      //       placeholder="First Name"
+      //     />
+      //     <input
+      //       required
+      //       type="text"
+      //       name="lastName"
+      //       onChange={onChangeHandler}
+      //       value={data.lastName}
+      //       placeholder="Last Name"
+      //     />
+      //   </div>
+
+      //   <input
+      //     required
+      //     name="email"
+      //     type="text"
+      //     onChange={onChangeHandler}
+      //     value={data.email}
+      //     placeholder="Email Address"
+      //   />
+      //   <input
+      //     required
+      //     name="street"
+      //     type="text"
+      //     onChange={onChangeHandler}
+      //     placeholder="Street"
+      //     value={data.street}
+      //   />
+      //   <div className="multi-fields">
+      //     <input
+      //       required
+      //       name="city"
+      //       onChange={onChangeHandler}
+      //       type="text"
+      //       placeholder="City"
+      //       value={data.city}
+      //     />
+      //     <input
+      //       required
+      //       name="state"
+      //       onChange={onChangeHandler}
+      //       type="text"
+      //       placeholder="State"
+      //       value={data.state}
+      //     />
+      //   </div>
+      //   <div className="multi-fields">
+      //     <input
+      //       required
+      //       name="zipcode"
+      //       onChange={onChangeHandler}
+      //       type="text"
+      //       placeholder="pin code"
+      //       value={data.zipcode}
+      //     />
+      //     <input
+      //       required
+      //       name="country"
+      //       type="text"
+      //       onChange={onChangeHandler}
+      //       placeholder="Country"
+      //       value={data.country}
+      //     />
+      //   </div>
+      //   <input
+      //     required
+      //     name="phone"
+      //     onChange={onChangeHandler}
+      //     type="text"
+      //     placeholder="Phone"
+      //     value={data.phone}
+      //   />
+      // </div>
+      // <div className="place-order-right">
+      //   <div className="cart-total">
+      //     <h2>Cart Totals</h2>
+      //     <div>
+      //       <div className="cart-total-details">
+      //         <p>Subtotal</p>
+      //         <p>${getTotalCartAmount()}</p>
+      //       </div>
+      //       <hr />
+      //       <div className="cart-total-details">
+      //         <p>Delivery Fee</p>
+
+      //         <p>${getTotalCartAmount() === 0 ? 0 : 3}</p>
+      //       </div>
+      //       <hr />
+      //       <div className="cart-total-details">
+      //         <p>Total</p>
+      //         <p>
+      //           ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 3}
+      //         </p>
+      //       </div>
+      //     </div>
+      //     <button>Proceed to Payment</button>
+      //   </div>
+      // </div>
+//     </form>
+//   );
+// };
+
+// export default PlaceOrder;
+
+import { useContext, useEffect, useState } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
+import {useNavigate} from "react-router-dom"
 
 const PlaceOrder = () => {
-  
-  const { getTotalCartAmount,token,food_list,cartItems,url} = useContext(StoreContext);
-  const [data,setData] = useState({
-    firstName:"",
-    lastName:"",
-    email:"",street:"",
-    city:"",
-    state:"",
-    zipcode:"",
-    country:"",
-    phone:"",
+  const { getTotalCartAmount, token, food_list, cartItems, url } =
+    useContext(StoreContext);
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    street: "",
+    city: "",
+    state: "",
+    zipcode: "",
+    country: "",
+    phone: "",
+  });
 
-  })
-  const onChangeHandler=(e)=>{
-    const name = e.target.name
-    const value =e.target.value
-    setData(data=>({
-      ...data,[name]:value
-    }))
-  }
-  useEffect(()=>{
+  const onChangeHandler = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setData((data) => ({
+      ...data,
+      [name]: value,
+    }));
+  };
+
+  useEffect(() => {
     console.log(data);
-    
-  },[data])
+  }, [data]);
 
-  const placeholder = async (event)=>{
+  const placeholder = async (event) => {
+    const frontend_url = "http://localhost:5173";
     event.preventDefault();
-    let orderItems=[];
-    food_list.map((item)=>{
-      if(cartItems[item._id]>0){
+
+    let orderItems = [];
+    food_list.map((item) => {
+      if (cartItems[item._id] > 0) {
         let itemInfo = item;
-        itemInfo["quality"] = cartItems[item._id]
-        orderItems.push(itemInfo)
+        itemInfo["quantity"] = cartItems[item._id];
+        orderItems.push(itemInfo);
       }
-    })
-    let orderData={
-      address:data,
-      items:orderItems,
-      amount:getTotalCartAmount()+2
+    });
+
+    let orderData = {
+      items: orderItems,
+      amount: getTotalCartAmount() + 3,
+      address: data,
+    };
+
+    console.log("Order Data:", orderData);
+
+    try {
+      const response = await axios.post(url + "api/order/place", orderData, {
+        headers: {
+          token,
+        },
+      });
+
+      console.log("Razorpay Order Response:", response.data);
+
+      if (response.data.success) {
+        const { order_id, amount, currency } = response.data;
+
+        const options = {
+          key: "rzp_test_smU524PweB5YuJ",
+          amount: amount.toString(),
+          currency: currency,
+          order_id: order_id,
+          name: "Your Company Name",
+          description: "Payment for your order",
+          handler: async function (response) {
+            console.log("Razorpay Payment Response:", response);
+
+            const verificationResponse = await axios.post(
+              url + "api/order/verify-payment",
+              {
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_signature: response.razorpay_signature,
+              },
+              {
+                headers: {
+                  token,
+                },
+              }
+            );
+
+            console.log(
+              "Payment Verification Response:",
+              verificationResponse.data
+            );
+
+            if (verificationResponse.data.success) {
+              alert("Payment Successful!");
+              window.location.href = `${frontend_url}/verify-payment?success=true&orderId=${response.razorpay_order_id}`;
+            } else {
+              alert("Payment Verification Failed!");
+              
+            }
+          },
+          prefill: {
+            name: `${data.firstName} ${data.lastName}`,
+            email: data.email,
+            contact: data.phone,
+          },
+          theme: {
+            color: "#F37254",
+          },
+        };
+
+        const rzp = new window.Razorpay(options);
+        rzp.open();
+      } else {
+        console.error("Error creating Razorpay order:", response.data.message);
+        alert("Error: " + response.data.message);
+      }
+    } catch (error) {
+      console.error("Error during payment process:", error);
+      alert("An error occurred during the payment process.");
     }
-    let response= await axios.post(url+"api/order/place",orderData,{headers:{
-      token
-    }})
-    if(response.data.success){
-      const{session_url} = response.data
-      window.location.replace(session_url)
+  };
+  const navigate = useNavigate()
+  useEffect(()=>{
+    if (!token) {
+      navigate('/cart')
     }
-    else{
-      alert("Error")
+    else if(getTotalCartAmount()===0){
+      navigate("/cart");
+
     }
-  
-  }
+  },[token])
+
   return (
     <form className="place-order" onSubmit={placeholder}>
       <div className="place-order-left">
@@ -63,7 +322,7 @@ const PlaceOrder = () => {
         <div className="multi-fields">
           <input
             required
-            type="text" 
+            type="text"
             name="firstName"
             onChange={onChangeHandler}
             value={data.firstName}
