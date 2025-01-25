@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { assets } from './../../assets/frontend_assets/assets';
 import './AppDownload.css'

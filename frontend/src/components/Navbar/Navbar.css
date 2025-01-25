@@ -4,10 +4,10 @@
     justify-content: space-between;
     align-items: center;
 }
-
-.navbar-logo {
-    width: 9rem;
+.navbar .logo{
+    width: 135px;
 }
+
 .navbar-menu{
     display: flex;
     list-style: none;

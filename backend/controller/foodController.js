@@ -45,7 +45,7 @@ const listFood= async(req,res)=>{
 //remove 
 const removeFood = async(req,res) => {
     try {
-        const food = await foodModel.findById(req.body.id);
+        const food = await foodModel.findById(req.body._id);
         
         // Check if the food item exists
         if (!food) {
@@ -58,7 +58,7 @@ const removeFood = async(req,res) => {
             }
         });
 
-        await foodModel.findByIdAndDelete(req.body.id);
+        await foodModel.findByIdAndDelete(req.body._id);
         res.json({ success: true, message: "Food Removed" });
     } catch (error) {
         console.log(error);
