@@ -214,7 +214,7 @@ const PlaceOrder = () => {
   }, [data]);
 
   const placeholder = async (event) => {
-    const frontend_url = "http://localhost:5173";
+    const frontend_url = "http://localhost:5174";
     event.preventDefault();
 
     let orderItems = [];
