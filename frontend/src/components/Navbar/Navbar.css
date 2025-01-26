@@ -24,14 +24,14 @@
     background: transparent;
     font-size: 1rem ;
     color: black;
-    border: 1px solid tomato;
+    border: 1px solid #316304;
     padding: 10px 40px;
     border-radius: 50px;
     transition: .15s ease-in-out;
 }
 
 .navbar button:hover{
-    background: tomato;
+    background: #316304;
     color: white;
     transform: scale(1.1);
 }
@@ -54,7 +54,7 @@
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: tomato;
+    background-color: #316304;
     border-radius: 5px ;
     top:-8px;
     right: -8px;
@@ -93,7 +93,7 @@
 }
 
 .navbar-profile-dropdown li:hover{
-    color: tomato;
+    color: #316304;
 }
 
 @media (max-width:1050px) {.navbar .logo {

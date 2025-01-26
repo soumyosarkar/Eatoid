@@ -50,7 +50,7 @@
     padding: 10px;
     border-radius: 4px;
     color: white;
-    background-color: tomato;
+    background-color: #316304;
     font-size: 15px;
 }
 .login-popup-condition {
@@ -63,7 +63,7 @@
     margin-top: 5px;
 }
 .login-popup p span{
-    color: tomato;
+    color: #316304;
     font-weight: 500;
     cursor: pointer;
     text-decoration: underline;

@@ -1,9 +1,11 @@
-.header{
+/* .header{
     height: 34vw;
+    
     margin: 40px auto;
-    background: url('/header_img.png') no-repeat;
+    background: url('/pexels-photo-1410236.png') no-repeat;
     background-size: contain;
     position: relative;
+    border-radius: 20px;
 }
 
 .header-contents{
@@ -64,4 +66,203 @@
     .header-contents button {
         padding: 2vw 4vw;
     }
+}
+ */
+
+
+.hero-section {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    position: relative;
+    background-image: url('./pexels-photo-1410236.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    padding: 60px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.hero-left {
+    flex: 1;
+    padding-top: 50px;
+    width: 1000px;
+}
+
+.explore-tag {
+    display: inline-block;
+    background: #fff3dc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #333;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hero-left h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #316304;
+    font-weight: 700;
+}
+
+.hero-left p {
+    color: #6b6b6b;
+    margin-bottom: 32px;
+    max-width: 400px;
+    font-size: 16px;
+}
+.repeat{
+    color: #ffb000;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.plan-trip-btn {
+    background: #ffc955;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: transform 0.2s;
+    border: none;
+}
+
+.plan-trip-btn:hover {
+    transform: translateY(-2px);
+}
+
+.watch-story-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.play-icon {
+    background: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .hero-image{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ffd166;
+    background-image: url("https: //images.unsplash.com/photo-1469474968028-56623f02e42e?w=800");
+} */
+
+.activities-card {
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+.activities-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.activity {
+    display: flex;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    transition: background 0.3s;
+    margin-bottom: 8px;
+}
+
+.activity:hover {
+    background: #f8f8f8;
+}
+
+.activity-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.activity h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.activity p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.review-card {
+    position: absolute;
+    bottom: 15px;
+    left: -80px;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 260px;
+}
+
+.reviewer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 14px;
+    margin-top: 4px;
 }
