@@ -20,6 +20,8 @@ import "./Header.css";
 const Header = () => {
   const avatarImage =
     "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200";
+  const heroImage =
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800";
   return (
     <div className="yoyo">
       <div className="hero-section">
