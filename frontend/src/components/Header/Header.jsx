@@ -27,7 +27,7 @@ const Header = () => {
       <div className="hero-section">
         <div className="hero-left">
           <div className="explore-tag">
-            <span>Explore the world 🌍</span>
+            <span>Explore the world of food 🍲</span>
           </div>
           <h1>
             <span>Crave it?</span>
