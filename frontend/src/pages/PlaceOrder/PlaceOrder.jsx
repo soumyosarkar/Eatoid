@@ -34,7 +34,7 @@ const PlaceOrder = () => {
   }, [data]);
 
   const placeholder = async (event) => {
-    const frontend_url = "http://localhost:5174";
+    const frontend_url = "https://eatoid-frontend.onrender.com";
     event.preventDefault();
 
     let orderItems = [];
