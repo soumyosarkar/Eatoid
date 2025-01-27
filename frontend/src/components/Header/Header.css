@@ -1,81 +1,9 @@
-/* .header{
-    height: 34vw;
-    
-    margin: 40px auto;
-    background: url('/pexels-photo-1410236.png') no-repeat;
-    background-size: contain;
-    position: relative;
-    border-radius: 20px;
-}
-
-.header-contents{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
-    left: 6vw;
-    animation: fadeIn 3s;
-}
-
-.header-contents h2 {
-    font-weight: 500;
-    color: white;
-    font-size: max(4vw, 22px);
-}
-
-.header-contents p {
-    color: white;
-    font-size: 1vw;
-    margin-bottom: 2px;
-}
-
-.header-contents button {
-    border: none;
-    color: black;
-    font-weight: 500;
-    padding: 1vw 2.3vw;
-    background-color:white;
-    font-size: max(1vw,13px);
-    border-radius: 50px;
-    transition: 0.5s;
-}
-.header-contents button:hover{
-        transform: scale(1.1);
-    
-}
-
-@media (max-width: 1050px) {
-
-.header -contents {
-        max-width: 45%;
-    }
-}
-
-@media (max-width: 750px) {
-
-
-    .header -contents {
-        max-width: 65%;
-    }
-    .header-contents p{
-        display: none;
-    }
-    .header-contents button {
-        padding: 2vw 4vw;
-    }
-}
- */
-
-
 .hero-section {
     display: flex;
     gap: 40px;
     margin-top: 50px;
     position: relative;
-    background-image: url('https: //images.unsplash.com/photo-1469474968028-56623f02e42e?w=800');
+    background-image: url('./header_img.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,7 +106,7 @@
     background-image: url("https: //images.unsplash.com/photo-1469474968028-56623f02e42e?w=800");
 } */
 
-.activities-card {
+.food-delivery-card {
     position: absolute;
     top: 40px;
     right: -20px;
@@ -189,14 +117,14 @@
     width: 320px;
 }
 
-.activities-card h3 {
+.food-delivery-card h3 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
     color: #1a1a1a;
 }
 
-.activity {
+.feature {
     display: flex;
     gap: 16px;
     padding: 12px;
@@ -205,11 +133,11 @@
     margin-bottom: 8px;
 }
 
-.activity:hover {
+.feature:hover {
     background: #f8f8f8;
 }
 
-.activity-icon {
+.feature-icon {
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -220,14 +148,14 @@
     font-size: 20px;
 }
 
-.activity h4 {
+.feature h4 {
     margin: 0;
     font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
 }
 
-.activity p {
+.feature p {
     margin: 4px 0 0;
     font-size: 14px;
     color: #666;

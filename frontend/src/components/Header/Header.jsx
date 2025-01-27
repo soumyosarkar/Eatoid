@@ -43,9 +43,9 @@ const Header = () => {
             <button className="plan-trip-btn">View more</button>
           </div>
         </div>
-        {/* <div className="hero-right">
+        <div className="hero-right">
           <div className="hero-image"></div>
-          <div className="activities-card">
+          {/* <div className="activities-card">
             <h3>Why you are most excited ?</h3>
             <div className="activity">
               <span className="activity-icon">🏃</span>
@@ -68,6 +68,41 @@ const Header = () => {
                 <p>It feels more like flying than falling</p>
               </div>
             </div>
+          </div> */}
+          <div className="food-delivery-card">
+            <h3>What makes us special?</h3>
+
+            <div className="feature">
+              <span className="feature-icon">🍕</span>
+              <div>
+                <h4>Wide Variety</h4>
+                <p>Explore cuisines from around the world</p>
+              </div>
+            </div>
+
+            <div className="feature">
+              <span className="feature-icon">🚀</span>
+              <div>
+                <h4>Fast Delivery</h4>
+                <p>Get your food delivered in record time</p>
+              </div>
+            </div>
+
+            <div className="feature">
+              <span className="feature-icon">🎁</span>
+              <div>
+                <h4>Exclusive Deals</h4>
+                <p>Enjoy discounts and special offers</p>
+              </div>
+            </div>
+
+            <div className="feature">
+              <span className="feature-icon">🌟</span>
+              <div>
+                <h4>Top-rated Restaurants</h4>
+                <p>Order from the best-rated places in town</p>
+              </div>
+            </div>
           </div>
           <div className="review-card">
             <img src={avatarImage} alt="Reviewer" className="reviewer-avatar" />
@@ -76,7 +111,7 @@ const Header = () => {
               <div className="stars">⭐⭐⭐⭐⭐</div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
