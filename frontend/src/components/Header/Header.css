@@ -194,3 +194,29 @@
     font-size: 14px;
     margin-top: 4px;
 }
+
+@media (max-width:900px) {
+    .hero-section{
+        width: 82vw;
+        height: 40vh ;
+    }
+    .food-delivery-card{
+        display: none;
+    }
+    .review-card{
+        display: none;
+    }
+    .hero-left h1 {
+        font-size: 30px;
+        color: #000000;
+    }
+    .explore-tag{
+        display: none;
+    }
+    .hero-left p {
+        display: none;
+    }
+    .plan-trip-btn{
+        font-size: 12px;
+    }
+}

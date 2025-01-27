@@ -48,18 +48,34 @@ const Add = ({url}) => {
         <div className="add-img-upload flex-col">
           <p>Upload Image</p>
           <label htmlFor="image">
-            <img src={image?URL.createObjectURL(image):assets.upload_area} alt="" />
+            <img
+              src={image ? URL.createObjectURL(image) : assets.upload_area}
+              alt=""
+            />
           </label>
-          <input onChange={(e)=>setImage(e.target.files[0])} type="file" id="image" hidden required />
+          <input
+            onChange={(e) => setImage(e.target.files[0])}
+            type="file"
+            id="image"
+            hidden
+            required
+          />
         </div>
         <div className="add-product-name flex-col">
           <p>Product Name</p>
-          <input onChange={onChangeHandler} value={data.name} type="text" name="name" placeholder="type here" />
+          <input
+            onChange={onChangeHandler}
+            value={data.name}
+            type="text"
+            name="name"
+            placeholder="type here"
+          />
         </div>
         <div className="add-product-description flex-col">
           <p>Product Description</p>
           <textarea
-            onChange={onChangeHandler} value={data.description}
+            onChange={onChangeHandler}
+            value={data.description}
             name="description"
             rows="6"
             placeholder="Write content here"
@@ -68,7 +84,7 @@ const Add = ({url}) => {
         <div className="add-category-price">
           <div className="add-category flex-col">
             <p>Product Category</p>
-            <select onChange={onChangeHandler}  name="category" id="">
+            <select onChange={onChangeHandler} name="category" id="">
               <option value="Salad">Salad</option>
               <option value="Rolls">Rolls</option>
               <option value="Deserts">Deserts</option>
@@ -81,10 +97,18 @@ const Add = ({url}) => {
           </div>
           <div className="add-price flex-col">
             <p>Product price</p>
-            <input type="Number" onChange={onChangeHandler} value={data.price} name='price' placeholder='$20'/>
+            <input
+              type="Number"
+              onChange={onChangeHandler}
+              value={data.price}
+              name="price"
+              placeholder="₹200"
+            />
           </div>
         </div>
-        <button type='Submit' className='add-btn'>Add</button>
+        <button type="Submit" className="add-btn">
+          Add
+        </button>
       </form>
     </div>
   );
