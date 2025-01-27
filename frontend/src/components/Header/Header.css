@@ -3,7 +3,7 @@
     gap: 40px;
     margin-top: 50px;
     position: relative;
-    background-image: url('./header_img.png');
+    background-image: url('/header_img.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
