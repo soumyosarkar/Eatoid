@@ -97,7 +97,7 @@ const PlaceOrder = () => {
 
             if (verificationResponse.data.success) {
               alert("Payment Successful!");
-              // window.location.href = `${frontend_url}/verify-payment?success=true&orderId=${response.razorpay_order_id}`;
+              window.location.href = `${frontend_url}`;
             } else {
               alert("Payment Verification Failed!");
             }
