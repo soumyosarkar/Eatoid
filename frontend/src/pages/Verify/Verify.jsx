@@ -11,10 +11,8 @@ const Verify = () => {
     const orderId = searchParams.get("orderId");
     const {url} = useContext(StoreContext)
     const navigate= useNavigate();
-    console.log(success, orderId);
 
     const verifyPayment = async()=>{
-      console.log(success,orderId);
       
       const response = await axios.post(url+"api/order/verify-payment",{success,orderId})
       if(response.data.success){
@@ -24,9 +22,9 @@ const Verify = () => {
         navigate("/")
       }
     }
-    useEffect (()=>{
-      verifyPayment()
-    },[])
+    useEffect(() => {
+      verifyPayment();
+    }, [success, orderId]);
 
   return (
     <div className="verify">
